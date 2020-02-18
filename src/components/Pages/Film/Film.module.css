@@ -1,0 +1,45 @@
+.container,.container * {
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
+.container h1{
+  font-weight: 900;
+}
+
+.container img{
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #07ee82;
+  margin-top: 15px;
+}
+.container .infos{
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10%;
+}
+.container .infos p{}
+.container .infos .popularity{
+  font-weight: bold;
+  color: #07ee82;
+}
+.container .overview{
+  margin-top: 15px;
+}
+.container .add{
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size: 3.5rem;
+  color: #07ee82;
+}
