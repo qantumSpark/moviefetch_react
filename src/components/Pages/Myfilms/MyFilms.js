@@ -3,7 +3,11 @@ import * as api from '../../../util/localAPI'
 import FilmCard from '../Home/Results/FilmCard'
 import styles from './MyFilms.module.css'
 const MyFilms = () => {
-
+  //Check l'existence de la collection dans le local storage
+  if(!Boolean(api.getCollection("Films"))){
+    api.newCollection("Films")
+  }
+  //Update state from Local Storage
   const [list, setList] = useState(api.getCollection("Films")) 
 
   const onClick = (e, id) => {

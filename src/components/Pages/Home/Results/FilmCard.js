@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './FilmCard.module.css'
+
 const FilmCard = props => {
   return (
     <div className={styles.film} onClick={e => props.onClick(e, props.id)}>

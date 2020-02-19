@@ -37,6 +37,7 @@
   margin-top: 15px;
 }
 .container .add{
+  cursor: pointer;
   position: absolute;
   right: 0;
   font-weight: bold;

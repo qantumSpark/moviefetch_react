@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import * as config from '../../../config/config'
 import * as api from '../../../util/localAPI'
 import styles from './Film.module.css'
 const Project = (props) => {
@@ -7,7 +6,7 @@ const Project = (props) => {
   const [film, setFilm] = useState([])
 
   const getDetails = async () => {
-    let details = await fetchFilms(props.id, config.API_KEY)
+    let details = await fetchFilms(props.id)
     setFilm(details)
   }
   if(film.length === 0){
@@ -44,10 +43,8 @@ const Project = (props) => {
       </div>
     )
 }
-async function fetchFilms(id, apiKey){
-  let url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`
-  console.log(url);
-  let response = await fetch(url)
+async function fetchFilms(id){
+  let response = await fetch(`/api/film/${id}`)
   let data = await response.json()
   return data
 }

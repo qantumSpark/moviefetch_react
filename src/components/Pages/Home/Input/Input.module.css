@@ -4,4 +4,22 @@
 .container input{
   width: 100%;
   text-align: center ;
+  font-size: 2rem;
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 3px solid rgb(38, 45, 66, .7);
+  font-weight: 500;
+  color :rgb(38, 45, 66);
+}
+.container input::placeholder{
+  color :rgb(38, 45, 66);
+  opacity: .7;
+}
+.container input:focus::placeholder{
+  opacity: .1;
+}
+.container input:focus{
+  border: none;
+  border-bottom: 3px solid rgb(38, 45, 66);
 }
